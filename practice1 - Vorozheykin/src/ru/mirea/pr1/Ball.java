@@ -1,4 +1,4 @@
-package ru.mirea.lab1;
+package ru.mirea.pr1;
 
 public class Ball {
 	private final int size;
