@@ -14,4 +14,11 @@ public class Hand {
 	public void setLength(int length) {
 		this.length = length;
 	}
+
+	@Override
+	public String toString() {
+		return "Hand{" +
+				"length=" + length +
+				'}';
+	}
 }

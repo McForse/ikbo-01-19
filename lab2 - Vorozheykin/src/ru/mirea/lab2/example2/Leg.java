@@ -14,4 +14,11 @@ public class Leg {
 	public void setLength(int length) {
 		this.length = length;
 	}
+
+	@Override
+	public String toString() {
+		return "Leg{" +
+				"length=" + length +
+				'}';
+	}
 }

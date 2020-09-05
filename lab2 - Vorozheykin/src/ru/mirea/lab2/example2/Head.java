@@ -24,4 +24,12 @@ public class Head {
 	public void setEyeColor(String eyeColor) {
 		this.eyeColor = eyeColor;
 	}
+
+	@Override
+	public String toString() {
+		return "Head{" +
+				"hairColor='" + hairColor + '\'' +
+				", eyeColor='" + eyeColor + '\'' +
+				'}';
+	}
 }

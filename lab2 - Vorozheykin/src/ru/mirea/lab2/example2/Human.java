@@ -65,4 +65,16 @@ public class Human {
 	public void setHand(Hand hand) {
 		this.hand = hand;
 	}
+
+	@Override
+	public String toString() {
+		return "Human{" +
+				"name='" + name + '\'' +
+				", surname='" + surname + '\'' +
+				", age=" + age +
+				", head=" + head +
+				", leg=" + leg +
+				", hand=" + hand +
+				'}';
+	}
 }
