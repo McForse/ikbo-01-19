@@ -1,9 +1,9 @@
-package ru.mirea.lab2.example2;
+package ru.mirea.lab2.exercise2;
 
-public class Hand {
+public class Leg {
 	private int length;
 
-	public Hand(int length) {
+	public Leg(int length) {
 		this.length = length;
 	}
 
@@ -17,7 +17,7 @@ public class Hand {
 
 	@Override
 	public String toString() {
-		return "Hand{" +
+		return "Leg{" +
 				"length=" + length +
 				'}';
 	}

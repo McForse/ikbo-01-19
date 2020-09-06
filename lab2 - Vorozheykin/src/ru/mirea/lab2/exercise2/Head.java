@@ -1,4 +1,4 @@
-package ru.mirea.lab2.example2;
+package ru.mirea.lab2.exercise2;
 
 public class Head {
 	private String hairColor;

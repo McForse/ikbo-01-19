@@ -1,6 +1,6 @@
 package ru.mirea.lab1;
 
-public class Example3 {
+public class Exercise3 {
 
 	public static void main(String[] args) {
 		final int numbersCount = 10;

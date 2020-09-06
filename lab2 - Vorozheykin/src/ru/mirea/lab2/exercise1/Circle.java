@@ -1,4 +1,4 @@
-package ru.mirea.lab2.example1;
+package ru.mirea.lab2.exercise1;
 
 public class Circle {
 	private double radius;

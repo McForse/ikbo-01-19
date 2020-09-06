@@ -1,6 +1,6 @@
 package ru.mirea.lab1;
 
-public class Example1 {
+public class Exercise1 {
 
 	public static void main(String[] args) {
 		int[] array = {1, 4, 10, 3, 7, 5, 2, 6, 9, 8};

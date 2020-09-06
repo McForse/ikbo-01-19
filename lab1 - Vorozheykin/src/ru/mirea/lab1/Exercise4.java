@@ -2,7 +2,7 @@ package ru.mirea.lab1;
 
 import java.util.Arrays;
 
-public class Example4 {
+public class Exercise4 {
 
 	public static void main(String[] args) {
 		int[] array = new int[10];

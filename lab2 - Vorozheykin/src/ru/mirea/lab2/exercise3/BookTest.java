@@ -1,4 +1,4 @@
-package ru.mirea.lab2.example3;
+package ru.mirea.lab2.exercise3;
 
 public class BookTest {
 
