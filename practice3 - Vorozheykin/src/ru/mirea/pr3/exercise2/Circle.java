@@ -12,7 +12,7 @@ public class Circle extends Shape {
 
 	public Circle(double radius, String color, boolean filled) {
 		super(color, filled);
-		this.radius = radius;
+		setRadius(radius);
 	}
 
 	public double getRadius() {
@@ -20,6 +20,7 @@ public class Circle extends Shape {
 	}
 
 	public void setRadius(double radius) {
+		if (radius < 0) throw new IllegalArgumentException("Radius cannot be negative");
 		this.radius = radius;
 	}
 

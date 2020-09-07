@@ -17,6 +17,7 @@ public class Square extends Rectangle {
 	}
 
 	public void setSide(double side) {
+		if (side < 0) throw new IllegalArgumentException("Side cannot be negative");
 		setLength(side);
 		setWidth(side);
 	}

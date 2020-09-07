@@ -1,4 +1,4 @@
-package ru.mirea.lab3.example1;
+package ru.mirea.lab3.exercise1;
 
 public class Cup extends Dish {
 	private String material;
@@ -25,6 +25,7 @@ public class Cup extends Dish {
 	}
 
 	public void setCapacity(int capacity) {
+		if (capacity < 0) throw new IllegalArgumentException("Capacity cannot be negative");
 		this.capacity = capacity;
 	}
 

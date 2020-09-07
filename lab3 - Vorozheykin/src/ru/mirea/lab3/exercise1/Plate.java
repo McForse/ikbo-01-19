@@ -1,4 +1,4 @@
-package ru.mirea.lab3.example1;
+package ru.mirea.lab3.exercise1;
 
 public class Plate extends Dish {
 	private int size;

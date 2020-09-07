@@ -12,6 +12,7 @@ public class Hand {
 	}
 
 	public void setLength(int length) {
+		if (length < 0) throw new IllegalArgumentException("Length cannot be negative");
 		this.length = length;
 	}
 

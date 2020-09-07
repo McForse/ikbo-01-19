@@ -1,15 +1,25 @@
-package ru.mirea.lab3.example3;
+package ru.mirea.lab3.exercise3;
 
-public class Armchair extends Furniture {
+public class Sofa extends Furniture {
+	private int length;
 	private int width;
-	private int depth;
 	private int height;
 
-	public Armchair(long price, int width, int depth, int height) {
-		super("Armchair", price);
+	public Sofa(long price, int length, int width, int height) {
+		super("Sofa", price);
+		setLength(length);
 		setWidth(width);
-		setDepth(depth);
 		setHeight(height);
+		this.height = height;
+	}
+
+	public int getLength() {
+		return length;
+	}
+
+	public void setLength(int length) {
+		if (length < 0) throw new IllegalArgumentException("Length cannot be negative");
+		this.length = length;
 	}
 
 	public int getWidth() {
@@ -19,15 +29,6 @@ public class Armchair extends Furniture {
 	public void setWidth(int width) {
 		if (width < 0) throw new IllegalArgumentException("Width cannot be negative");
 		this.width = width;
-	}
-
-	public int getDepth() {
-		return depth;
-	}
-
-	public void setDepth(int depth) {
-		if (depth < 0) throw new IllegalArgumentException("Depth cannot be negative");
-		this.depth = depth;
 	}
 
 	public int getHeight() {
@@ -41,9 +42,9 @@ public class Armchair extends Furniture {
 
 	@Override
 	public String toString() {
-		return "Armchair{" +
-				"width=" + width +
-				", depth=" + depth +
+		return "Sofa{" +
+				"length=" + length +
+				", width=" + width +
 				", height=" + height +
 				", price=" + getPrice() +
 				'}';

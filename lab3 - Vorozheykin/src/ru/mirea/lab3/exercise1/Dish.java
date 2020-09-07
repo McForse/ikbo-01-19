@@ -1,4 +1,4 @@
-package ru.mirea.lab3.example1;
+package ru.mirea.lab3.exercise1;
 
 public abstract class Dish {
 	private String name;

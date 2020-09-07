@@ -1,4 +1,4 @@
-package ru.mirea.lab3.example3;
+package ru.mirea.lab3.exercise3;
 
 public class FurnitureTest {
 

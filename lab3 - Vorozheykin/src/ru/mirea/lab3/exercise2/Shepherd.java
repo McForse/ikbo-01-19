@@ -1,4 +1,4 @@
-package ru.mirea.lab3.example2;
+package ru.mirea.lab3.exercise2;
 
 public class Shepherd extends Dog {
 	public Shepherd(String name, int age) {

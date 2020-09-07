@@ -8,14 +8,14 @@ public class Rectangle extends Shape {
 	}
 
 	public Rectangle(double width, double length) {
-		this.width = width;
-		this.length = length;
+		setWidth(width);
+		setLength(length);
 	}
 
 	public Rectangle(double width, double length, String color, boolean filled) {
 		super(color, filled);
-		this.width = width;
-		this.length = length;
+		setWidth(width);
+		setLength(length);
 	}
 
 	public double getWidth() {
@@ -23,6 +23,7 @@ public class Rectangle extends Shape {
 	}
 
 	public void setWidth(double width) {
+		if (width < 0) throw new IllegalArgumentException("Width cannot be negative");
 		this.width = width;
 	}
 
@@ -31,6 +32,7 @@ public class Rectangle extends Shape {
 	}
 
 	public void setLength(double length) {
+		if (length < 0) throw new IllegalArgumentException("Length cannot be negative");
 		this.length = length;
 	}
 
