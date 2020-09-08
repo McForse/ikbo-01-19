@@ -2,6 +2,13 @@ package ru.mirea.pr5;
 
 import java.util.Scanner;
 
+/**
+ * Сумма цифр числа
+ * Дано натуральное число N. Вычислите сумму его цифр.
+ * 46
+ * При решении этой задачи нельзя использовать строки, списки, массивы (ну
+ * и циклы, разумеется).
+ */
 public class Exercise5 {
 
 	public static void main(String[] args) {

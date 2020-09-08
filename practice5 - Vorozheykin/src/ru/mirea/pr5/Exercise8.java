@@ -2,6 +2,11 @@ package ru.mirea.pr5;
 
 import java.util.Scanner;
 
+/**
+ * Палиндром
+ * Дано слово, состоящее только из строчных латинских букв. Проверьте,
+ * является ли это слово палиндромом. Выведите YES или NO.
+ */
 public class Exercise8 {
 
 	public static void main(String[] args) {

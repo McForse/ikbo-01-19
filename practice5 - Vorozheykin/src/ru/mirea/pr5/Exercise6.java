@@ -2,6 +2,12 @@ package ru.mirea.pr5;
 
 import java.util.Scanner;
 
+/**
+ * Проверка числа на простоту
+ * Дано натуральное число n>1. Проверьте, является ли оно простым.
+ * Программа должна вывести слово YES, если число простое и NO, если число
+ * составное. Алгоритм должен иметь сложность O(logn).
+ */
 public class Exercise6 {
 
 	public static void main(String[] args) {
