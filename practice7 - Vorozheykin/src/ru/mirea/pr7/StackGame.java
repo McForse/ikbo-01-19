@@ -43,7 +43,9 @@ public class StackGame extends Game<Stack<Integer>> {
 
 	@Override
 	public void giveCard(Stack<Integer> from, Stack<Integer> to) {
-		to.push(from.peek());
+		to.insertElementAt(to.peek(), 0);
+		to.pop();
+		to.insertElementAt(from.peek(), 0);
 		from.pop();
 	}
 }

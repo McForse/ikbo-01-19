@@ -44,6 +44,8 @@ public class QueueGame extends Game<Queue<Integer>> {
 
 	@Override
 	public void giveCard(Queue<Integer> from, Queue<Integer> to) {
+		to.offer(to.peek());
+		to.remove();
 		to.offer(from.peek());
 		from.remove();
 	}

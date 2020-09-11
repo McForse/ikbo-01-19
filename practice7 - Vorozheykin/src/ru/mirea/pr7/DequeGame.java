@@ -2,9 +2,9 @@ package ru.mirea.pr7;
 
 import java.util.*;
 
-public class DequeueGame extends Game<Deque<Integer>> {
+public class DequeGame extends Game<Deque<Integer>> {
 
-	public DequeueGame(Scanner sc) {
+	public DequeGame(Scanner sc) {
 		super(sc);
 	}
 
@@ -22,12 +22,12 @@ public class DequeueGame extends Game<Deque<Integer>> {
 
 	@Override
 	public Integer getPlayer1Card() {
-		return deck1.peek();
+		return deck1.peekLast();
 	}
 
 	@Override
 	public Integer getPlayer2Card() {
-		return deck2.peek();
+		return deck2.peekLast();
 	}
 
 	@Override
@@ -42,7 +42,9 @@ public class DequeueGame extends Game<Deque<Integer>> {
 
 	@Override
 	public void giveCard(Deque<Integer> from, Deque<Integer> to) {
-		to.push(from.peek());
+		to.offerFirst(to.peekLast());
+		to.removeLast();
+		to.offerFirst(from.peekLast());
 		from.removeLast();
 	}
 }

@@ -20,10 +20,10 @@ public abstract class Game<T> implements Gameable<T> {
 			card1 = getPlayer1Card();
 			card2 = getPlayer2Card();
 
-			if (card1 == 0) {
+			if (card1 == 0 && card2 == 9) {
 				giveCard(deck2, deck1);
 				continue;
-			} else if (card2 == 0) {
+			} else if (card2 == 0 && card1 == 9) {
 				giveCard(deck1, deck2);
 				continue;
 			}
