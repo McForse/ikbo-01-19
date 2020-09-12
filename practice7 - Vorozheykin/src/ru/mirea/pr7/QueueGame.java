@@ -6,10 +6,6 @@ import java.util.Scanner;
 
 public class QueueGame extends Game<Queue<Integer>> {
 
-	public QueueGame(Scanner sc) {
-		super(sc);
-	}
-
 	@Override
 	public Queue<Integer> setPlayerDeck(Scanner sc) {
 		String cards = sc.nextLine();

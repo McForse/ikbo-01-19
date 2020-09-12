@@ -4,8 +4,8 @@ import java.util.*;
 
 public class DequeGame extends Game<Deque<Integer>> {
 
-	public DequeGame(Scanner sc) {
-		super(sc);
+	public DequeGame(Deque<Integer> deck1, Deque<Integer> deck2) {
+		super(deck1, deck2);
 	}
 
 	@Override
@@ -38,6 +38,14 @@ public class DequeGame extends Game<Deque<Integer>> {
 	@Override
 	public boolean isPlayer2DeckEmpty() {
 		return deck2.isEmpty();
+	}
+
+	public Integer getPlayer1DeckSize() {
+		return deck1.size();
+	}
+
+	public Integer getPlayer2DeckSize() {
+		return deck2.size();
 	}
 
 	@Override

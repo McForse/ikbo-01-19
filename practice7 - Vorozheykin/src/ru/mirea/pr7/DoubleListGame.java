@@ -7,10 +7,6 @@ import java.util.Scanner;
 
 public class DoubleListGame extends Game<DoubleList> {
 
-	public DoubleListGame(Scanner sc) {
-		super(sc);
-	}
-
 	@Override
 	public DoubleList setPlayerDeck(Scanner sc) {
 		String cards = sc.nextLine();

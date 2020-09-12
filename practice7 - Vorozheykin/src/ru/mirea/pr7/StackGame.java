@@ -5,10 +5,6 @@ import java.util.Stack;
 
 public class StackGame extends Game<Stack<Integer>> {
 
-	public StackGame(Scanner sc) {
-		super(sc);
-	}
-
 	@Override
 	public Stack<Integer> setPlayerDeck(Scanner sc) {
 		String cards = sc.nextLine();
