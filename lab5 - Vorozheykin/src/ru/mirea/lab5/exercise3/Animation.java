@@ -12,7 +12,7 @@ public class Animation extends JFrame {
 	private void initComponents() {
 		setTitle("Fire animation");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setMaximumSize(new Dimension(180, 200));
+		setMinimumSize(new Dimension(180, 200));
 		getRootPane().setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		add(new FireSprite());
 		pack();
