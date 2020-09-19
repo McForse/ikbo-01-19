@@ -110,6 +110,7 @@ public class GuessingGame extends JFrame {
 		guessButton.setEnabled(true);
 		resetButton.setVisible(false);
 		attempts = 0;
+		result.setText("Attempts left: " + (3 - attempts));
 	}
 
 	public static void main(String[] args) {
