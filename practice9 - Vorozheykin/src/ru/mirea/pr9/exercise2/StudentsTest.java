@@ -2,7 +2,7 @@ package ru.mirea.pr9.exercise2;
 
 import java.util.Scanner;
 
-public class Test {
+public class StudentsTest {
 
 	public static void main(String[] args) throws EmptyStringException {
 		LabClassUi labClassUi = new LabClass().getLabClassUi();
