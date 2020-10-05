@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class ArrayQueue<E> extends AbstractQueue<E> {
 	protected ArrayList<E> data;
 
+	public ArrayQueue() {
+		this.data = new ArrayList<>();
+	}
+
 	@Override
 	public int size() {
 		return data.size();
@@ -17,7 +21,7 @@ public class ArrayQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public E poll() {
-		if (data == null) {
+		if (data.isEmpty()) {
 			return null;
 		}
 
@@ -28,6 +32,6 @@ public class ArrayQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public E peek() {
-		return data == null ? null : data.get(0);
+		return data.isEmpty() ? null : data.get(0);
 	}
 }

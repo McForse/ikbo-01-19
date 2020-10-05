@@ -1,9 +1,13 @@
 package ru.mirea.pr11.exercise2;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class LinkedQueue<E> extends AbstractQueue<E> {
-	protected ArrayList<E> data;
+	protected LinkedList<E> data;
+
+	public LinkedQueue() {
+		this.data = new LinkedList<>();
+	}
 
 	@Override
 	public int size() {
@@ -17,17 +21,17 @@ public class LinkedQueue<E> extends AbstractQueue<E> {
 
 	@Override
 	public E poll() {
-		if (data == null) {
+		if (data.isEmpty()) {
 			return null;
 		}
 
-		E e = data.get(0);
-		data.remove(0);
+		E e = data.getFirst();
+		data.removeFirst();
 		return e;
 	}
 
 	@Override
 	public E peek() {
-		return data == null ? null : data.get(0);
+		return data.isEmpty() ? null : data.get(0);
 	}
 }
