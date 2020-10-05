@@ -8,7 +8,7 @@ public class Exercise4 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Pattern pattern = Pattern.compile("^(.+)@(.+)$");
+		Pattern pattern = Pattern.compile("^.+@.+$");
 		System.out.println("Enter email:");
 		Matcher matcher = pattern.matcher(scanner.nextLine());
 		System.out.println(matcher.matches());
