@@ -5,9 +5,9 @@ public interface Order {
 	boolean delete(String itemName);
 	int deleteAll(String itemName);
 	int getItemsCount();
-	Object[] getArray();
+	Item[] getArray();
 	int getOrderCost();
 	int getItemsCountOf(String itemName);
 	String[] getArrayOfItemsName();
-	Object[] getSortedArrayByCostDesc();
+	Item[] getSortedArrayByCostDesc();
 }

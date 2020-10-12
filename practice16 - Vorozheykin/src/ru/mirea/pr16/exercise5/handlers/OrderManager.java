@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class OrderManager implements Order {
-	private LoopingLinkedList<Item> data;
+	private final LoopingLinkedList<Item> data;
 
 	public OrderManager() {
 		this.data = new LoopingLinkedList<>();
@@ -26,8 +26,10 @@ public class OrderManager implements Order {
 
 	@Override
 	public boolean delete(String itemName) {
-		for (Item item : data.toArray()) {
-			if (item.getName().equals(itemName)) {
+		Object[] dataArray = data.toArray();
+
+		for (Object item : dataArray) {
+			if (((Item) item).getName().equals(itemName)) {
 				return data.remove(item);
 			}
 		}
@@ -38,9 +40,10 @@ public class OrderManager implements Order {
 	@Override
 	public int deleteAll(String itemName) {
 		int count = 0;
+		Object[] dataArray = data.toArray();
 
-		for (Item item : data.toArray()) {
-			if (item.getName().equals(itemName)) {
+		for (Object item : dataArray) {
+			if (((Item) item).getName().equals(itemName)) {
 				data.remove(item);
 				count++;
 			}
@@ -55,16 +58,18 @@ public class OrderManager implements Order {
 	}
 
 	@Override
-	public Object[] getArray() {
-		return data.toArray();
+	public Item[] getArray() {
+		Object[] dataArray = data.toArray();
+		return Arrays.copyOf(dataArray, dataArray.length, Item[].class);
 	}
 
 	@Override
 	public int getOrderCost() {
 		int cost = 0;
+		Object[] dataArray = data.toArray();
 
-		for (Item item : data.toArray()) {
-			cost += item.getCost();
+		for (Object item : dataArray) {
+			cost += ((Item) item).getCost();
 		}
 
 		return cost;
@@ -73,9 +78,10 @@ public class OrderManager implements Order {
 	@Override
 	public int getItemsCountOf(String itemName) {
 		int count = 0;
+		Object[] dataArray = data.toArray();
 
-		for (Item item : data.toArray()) {
-			if (item.getName().equals(itemName)) {
+		for (Object item : dataArray) {
+			if (((Item) item).getName().equals(itemName)) {
 				count++;
 			}
 		}
@@ -86,19 +92,21 @@ public class OrderManager implements Order {
 	@Override
 	public String[] getArrayOfItemsName() {
 		HashSet<String> itemsMap = new HashSet<>();
+		Object[] dataArray = data.toArray();
 
-		for (Item item : data.toArray()) {
-			itemsMap.add(item.getName());
+		for (Object item : dataArray) {
+				itemsMap.add(((Item) item).getName());
 		}
 
-		return (String[]) itemsMap.toArray();
+		Object[] namesArray = itemsMap.toArray();
+
+		return Arrays.copyOf(namesArray, namesArray.length, String[].class);
 	}
 
 	@Override
-	public Object[] getSortedArrayByCostDesc() {
-		return Arrays.stream(
-				data.toArray())
-				.sorted((i1, i2) -> i2.getCost() - i1.getCost())
-				.toArray();
+	public Item[] getSortedArrayByCostDesc() {
+		Object[] dataArray = data.toArray();
+		Object[] sortedArray = Arrays.stream(dataArray).sorted((i1, i2) -> ((Item) i2).getCost() - ((Item) i1).getCost()).toArray();
+		return Arrays.copyOf(sortedArray, sortedArray.length, Item[].class);
 	}
 }

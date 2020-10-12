@@ -35,6 +35,15 @@ public class InternetOrder extends OrderManager {
 	}
 
 	public boolean add(String address, Item item) {
+		Order order = getOrder(address);
+
+		if (order == null) {
+			order = new OrderManager();
+			order.add(item);
+			orders.put(address, order);
+			return true;
+		}
+
 		return getOrder(address).add(item);
 	}
 
